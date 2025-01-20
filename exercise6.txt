@@ -1,0 +1,390 @@
+1)
+test> db.restaurants.find({},{_id:0,restaurant_id:1,name:1,borough:1,cuisine:1})
+[
+  {
+    borough: 'Bronx',
+    cuisine: 'Bakery',
+    name: 'Morris Park Bake Shop',
+    restaurant_id: '30075445'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Hamburgers',
+    name: "Wendy'S",
+    restaurant_id: '30112340'
+  }
+
+2)
+test> db.restaurants.find({borough:"Bronx"}).limit(5).skip(5)
+[
+  {
+    _id: ObjectId('678e61dc7845ea4da3495842'),
+    address: {
+      building: '658',
+      coord: [ -73.81363999999999, 40.82941100000001 ],
+      street: 'Clarence Ave',
+      zipcode: '10465'
+    },
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [
+      {
+        date: ISODate('2014-06-21T00:00:00.000Z'),
+        grade: 'A',
+        score: 5
+      },
+      {
+        date: ISODate('2012-07-11T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      }
+    ],
+    name: 'Manhem Club',
+    restaurant_id: '40364363'
+  },
+  {
+    _id: ObjectId('678e61dc7845ea4da349585a'),
+    address: {
+      building: '2222',
+      coord: [ -73.84971759999999, 40.8304811 ],
+      street: 'Haviland Avenue',
+      zipcode: '10462'
+    },
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [
+      {
+        date: ISODate('2014-12-18T00:00:00.000Z'),
+        grade: 'A',
+        score: 7
+      },
+      {
+        date: ISODate('2014-05-01T00:00:00.000Z'),
+        grade: 'B',
+        score: 17
+      },
+      {
+        date: ISODate('2013-03-14T00:00:00.000Z'),
+        grade: 'A',
+        score: 12
+      },
+      {
+        date: ISODate('2012-09-20T00:00:00.000Z'),
+        grade: 'A',
+        score: 9
+      },
+      {
+        date: ISODate('2012-02-08T00:00:00.000Z'),
+        grade: 'B',
+        score: 19
+      }
+    ],
+    name: 'The New Starling Athletic Club Of The Bronx',
+    restaurant_id: '40364956'
+  },
+  {
+    _id: ObjectId('678e61dc7845ea4da3495872'),
+    address: {
+      building: '72',
+      coord: [ -73.92506, 40.8275556 ],
+      street: 'East  161 Street',
+      zipcode: '10451'
+    },
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [
+      {
+        date: ISODate('2014-04-15T00:00:00.000Z'),
+        grade: 'A',
+        score: 9
+      },
+      {
+        date: ISODate('2013-11-14T00:00:00.000Z'),
+        grade: 'A',
+        score: 4
+      },
+      {
+        date: ISODate('2013-07-29T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      },
+      {
+        date: ISODate('2012-12-31T00:00:00.000Z'),
+        grade: 'B',
+        score: 15
+      },
+      {
+        date: ISODate('2012-05-30T00:00:00.000Z'),
+        grade: 'A',
+        score: 13
+      },
+      {
+        date: ISODate('2012-01-09T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      },
+      {
+        date: ISODate('2011-08-15T00:00:00.000Z'),
+        grade: 'C',
+        score: 37
+      }
+    ],
+    name: 'Yankee Tavern',
+    restaurant_id: '40365499'
+  },
+  {
+    _id: ObjectId('678e61dc7845ea4da3495885'),
+    address: {
+      building: '331',
+      coord: [ -73.87786539999999, 40.8724377 ],
+      street: 'East  204 Street',
+      zipcode: '10467'
+    },
+    borough: 'Bronx',
+    cuisine: 'Irish',
+    grades: [
+      {
+        date: ISODate('2014-08-26T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      },
+      {
+        date: ISODate('2014-03-26T00:00:00.000Z'),
+        grade: 'B',
+        score: 23
+      },
+      {
+        date: ISODate('2013-09-11T00:00:00.000Z'),
+        grade: 'A',
+        score: 13
+      },
+      {
+        date: ISODate('2012-12-18T00:00:00.000Z'),
+        grade: 'B',
+        score: 27
+      },
+      {
+        date: ISODate('2011-10-20T00:00:00.000Z'),
+        grade: 'A',
+        score: 13
+      }
+    ],
+    name: 'Mcdwyers Pub',
+    restaurant_id: '40365893'
+  },
+  {
+    _id: ObjectId('678e61dc7845ea4da349589e'),
+    address: {
+      building: '5820',
+      coord: [ -73.9002615, 40.885186 ],
+      street: 'Broadway',
+      zipcode: '10463'
+    },
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [
+      {
+        date: ISODate('2014-02-26T00:00:00.000Z'),
+        grade: 'A',
+        score: 5
+      },
+      {
+        date: ISODate('2013-10-09T00:00:00.000Z'),
+        grade: 'B',
+        score: 19
+      },
+      {
+        date: ISODate('2013-05-15T00:00:00.000Z'),
+        grade: 'A',
+        score: 9
+      },
+      {
+        date: ISODate('2012-11-20T00:00:00.000Z'),
+        grade: 'B',
+        score: 18
+      },
+      {
+        date: ISODate('2011-10-17T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      },
+      {
+        date: ISODate('2011-06-22T00:00:00.000Z'),
+        grade: 'C',
+        score: 35
+      }
+    ],
+    name: 'The Punch Bowl',
+    restaurant_id: '40366497'
+  }
+]
+
+3)
+test> db.restaurants.find({"grades.score":{$gt:90}},{name:1,"grades.score":1})
+[
+  {
+    _id: ObjectId('678e61dc7845ea4da3495963'),
+    grades: [
+      { score: 11 },
+      { score: 131 },
+      { score: 11 },
+      { score: 25 },
+      { score: 11 },
+      { score: 13 }
+    ],
+    name: "Murals On 54/Randolphs'S"
+  },
+  {
+    _id: ObjectId('678e61dc7845ea4da3495a04'),
+    grades: [
+      { score: 5 },
+      { score: 8 },
+      { score: 12 },
+      { score: 2 },
+      { score: 9 },
+      { score: 92 },
+      { score: 41 }
+    ],
+    name: 'Gandhi'
+  },
+  {
+    _id: ObjectId('678e61dc7845ea4da3495b67'),
+    grades: [
+      { score: 31 },
+      { score: 98 },
+      { score: 32 },
+      { score: 21 },
+      { score: 11 }
+    ],
+    name: 'Bella Napoli'
+  }
+]
+
+5)
+test> db.restaurants.find({borough:"Bronx",$or:[{cuisine:"American",cuisine:"Chinese"}]},{name:1,_id:0})
+[
+  { name: 'Happy Garden' },
+  { name: 'Happy Garden' },
+  { name: 'China Wok Ii' },
+  { name: 'Dragon City' },
+  { name: 'Hunan Balcony' },
+  { name: 'Great Wall Restaurant' },
+  { name: 'Lucky House Restaurant' },
+  { name: 'New Wah Kitchen' },
+  { name: 'New Hing Restaurant' },
+  { name: 'Hong Kong Restaurant' },
+  { name: "Kristy'S Restaurant" },
+  { name: 'East Dynasty' },
+  { name: 'Lin Home Chinese Restaura' },
+  { name: 'Peacock Restaurant' },
+  { name: "Lin'S Garden" },
+  { name: 'New Rainbow Restaurant' }
+]
+
+6)
+test> db.restaurants.find({borough:{$nin:["Staten Island","Queens","Bronx","Brooklyn"]}},{_id:0,restaurant_id:1,name:1,borough:1,cuisine:1})
+[
+  {
+    borough: 'Manhattan',
+    cuisine: 'Irish',
+    name: 'Dj Reynolds Pub And Restaurant',
+    restaurant_id: '30191841'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: '1 East 66Th Street Kitchen',
+    restaurant_id: '40359480'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Glorious Food',
+    restaurant_id: '40361521'
+  },
+
+7)
+test> db.restaurants.find({"grades.score":{$lt:10}},{_id:0,restaurant_id:1,name:1,borough:1,cuisine:1})
+[
+  {
+    borough: 'Bronx',
+    cuisine: 'Bakery',
+    name: 'Morris Park Bake Shop',
+    restaurant_id: '30075445'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Hamburgers',
+    name: "Wendy'S",
+    restaurant_id: '30112340'
+  },
+
+8)
+test> db.restaurants.find({grades:{$elemMatch:{grade:"A",score:11,date:ISODate("2014-08-11T00:00:00Z")}}},{_id:0,restaurant_id:1,name:1,grades:1})
+[
+  {
+    grades: [
+      {
+        date: ISODate('2014-08-11T00:00:00.000Z'),
+        grade: 'A',
+        score: 11
+      },
+      {
+        date: ISODate('2013-12-10T00:00:00.000Z'),
+        grade: 'A',
+        score: 9
+      },
+      {
+        date: ISODate('2013-06-10T00:00:00.000Z'),
+        grade: 'A',
+        score: 12
+      },
+      {
+        date: ISODate('2012-06-08T00:00:00.000Z'),
+        grade: 'A',
+        score: 13
+      },
+      {
+        date: ISODate('2012-01-25T00:00:00.000Z'),
+        grade: 'A',
+        score: 8
+      },
+      {
+        date: ISODate('2011-09-13T00:00:00.000Z'),
+        grade: 'A',
+        score: 12
+      }
+    ],
+    name: 'Don Filippo Restaurant',
+    restaurant_id: '40372417'
+  }
+]
+
+9)
+test> db.restaurants.find({},{_id:0,cuisine:1,borough:1}).sort({cuisine:1,borough:-1})
+[
+  { borough: 'Manhattan', cuisine: 'Afghan' },
+  { borough: 'Manhattan', cuisine: 'Afghan' },
+  { borough: 'Manhattan', cuisine: 'Afghan' },
+  { borough: 'Manhattan', cuisine: 'Afghan' },
+  { borough: 'Queens', cuisine: 'African' },
+  { borough: 'Brooklyn', cuisine: 'African' },
+  { borough: 'Bronx', cuisine: 'African' },
+  { borough: 'Bronx', cuisine: 'African' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' },
+  { borough: 'Staten Island', cuisine: 'American' }
+]
+
+10)
+test> db.restaurants.find({"address.street":{$exists:false}}).count()
+0
