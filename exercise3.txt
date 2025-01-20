@@ -1,0 +1,42 @@
+UNF:
+db(drug_number,name,description,dosage,method_of_admin,untis_per_day,start_date,finish_date)
+
+1NF:
+- No repeating groups
+- Primary key assigned
+- All cells should contain a value
+
+db(drug_number,name,description,dosage,method_of_admin,untis_per_day,start_date,finish_date)
+- Primary key is unique when PatientNo,DrugNo and StartDate is known
+
+db(*patientNo*,FullName,BedNo,WardNo,WardName,*drug_number*,name,description,dosage,method_of_admin,untis_per_day,*start_date*,finish_date)
+
+2NF:
+- No partial dependencies
+
+Violations:
+> we know the full name & BedNo of the patient based on the patientNo
+> we know the name, description, dosage & method of admin based on the drugNo
+
+medicalform(*patientNo*,WardNo,WardName,*drug_number*,units_per_day,*start_date*,finish_date)
+patient(*patientNo*,FullName,BedNo)
+drug(*drugNo*,drugName,description,dosage,MOA)
+
+3NF:
+- No transitive dependencies
+
+Violations:
+> we know the WardName based on the WardNo
+
+ward(*WardNo*,WardName)
+medicalform(*patientNo*,WardNo,*drug_number*,units_per_day,*start_date*,finish_date)
+patient(*patientNo*,FullName,BedNo)
+drug(*drugNo*,drugName,description,dosage,MOA)
+
+BCNF:
+- Each determinant is a candidate-key
+
+> we know the description of the drug name
+
+drugdescr(*drugName*,descr)
+(remove the description from the drug table)
