@@ -75,3 +75,59 @@ MariaDB [vacation]> SELECT count(*) from booking WHERE dateto>"2023-08-01";
 +----------+
 1 row in set (0.001 sec)
 
+
+
+
+
+
+
+7)
+
+MariaDB [vacation]> select hotelname, roomno, type from hotel JOIN room ON hotel.hotelno=room.hotelno WHERE hotel.hotelname="the tower hotel";
++-----------------+--------+--------+
+| hotelname       | roomno | type   |
++-----------------+--------+--------+
+| The Tower Hotel |    501 | single |
+| The Tower Hotel |    601 | double |
+| The Tower Hotel |    701 | family |
++-----------------+--------+--------+
+3 rows in set (0.000 sec)
+
+8)
+
+MariaDB [vacation]> SELECT * FROM booking WHERE now() BETWEEN datefrom AND dateto;
++---------+---------+------------+------------+--------+
+| hotelno | guestno | datefrom   | dateto     | roomno |
++---------+---------+------------+------------+--------+
+| fb02    |   10005 | 2023-05-12 | 2031-05-04 |   1101 |
++---------+---------+------------+------------+--------+
+1 row in set (0.001 sec)
+
+9)
+
+
+update values
+
+MariaDB [vacation]> UPDATE room SET price=price + (price * 5/100);
+Query OK, 12 rows affected (0.048 sec)
+Rows matched: 12  Changed: 12  Warnings: 0
+
+MariaDB [vacation]> select * from room;
++--------+---------+--------+-------+
+| roomno | hotelno | type   | price |
++--------+---------+--------+-------+
+|    501 | fb01    | single | 19.95 |
+|    601 | fb01    | double | 30.45 |
+|    701 | ch02    | single | 10.50 |
+|    701 | fb01    | family | 40.95 |
+|    801 | ch02    | double | 15.75 |
+|    901 | dc01    | single | 18.90 |
+|   1001 | ch01    | single | 31.50 |
+|   1001 | dc01    | double | 31.50 |
+|   1001 | fb02    | single | 60.90 |
+|   1101 | ch01    | family | 63.00 |
+|   1101 | dc01    | family | 36.75 |
+|   1101 | fb02    | double | 90.30 |
++--------+---------+--------+-------+
+12 rows in set (0.000 sec)
+
