@@ -1,0 +1,30 @@
+UNF:
+db(staffNo,dentistName,patientNo,patientName,appointment,surgeryNo)
+
+1NF:
+No repeating groups
+Primary key should be assigned
+Each cell should contain a value
+
+db(staffNo,dentistName,patientNo,patientName,appointment_date,appointment_time,surgeryNo)
+date and time should be seperated
+
+db(*staffNo*,dentistName,patientNo,patientName,*appointment_date*,*appointment_time*,surgeryNo)
+patientNo can come multiple times, appointment date and time is unique together with the staffNo
+
+2NF:
+-no partial dependencies
+
+db(*staffNo*,dentistName,patientNo,patientName,*appointment_date*,*appointment_time*,surgeryNo)
+
+appointment(*staffNo*,patientNo,patientName,*appointment_date*,*appointment_time*)
+dentist(*staffNo*,dentistName)
+surgery(*staffNo*,*appointment_date*,surgeryNo)
+
+3NF:
+-no transitive dependecies
+
+patient(*patientNo*,patientName)
+appointment(*staffNo*,patientNo,*appointment_date*,*appointment_time*)
+dentist(*staffNo*,dentistName)                            
+surgery(*staffNo*,*appointment_date*,surgeryNo)
