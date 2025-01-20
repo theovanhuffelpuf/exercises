@@ -1,0 +1,77 @@
+1)
+
+MariaDB [vacation]> select guestname, guestaddress from guest WHERE guestaddress like "%London%" ORDER BY guestname ASC;
++--------------+--------------------+
+| guestname    | guestaddress       |
++--------------+--------------------+
+| John Kay     | 56 High St, London |
+| Mike Ritchie | 18 Tain St, London |
++--------------+--------------------+
+2 rows in set (0.003 sec)
+
+2)
+
+MariaDB [vacation]> select * from room WHERE price<40 AND (type="double" OR type="family") ORDER BY price ASC;
++--------+---------+--------+-------+
+| roomno | hotelno | type   | price |
++--------+---------+--------+-------+
+|    801 | ch02    | double | 15.00 |
+|    601 | fb01    | double | 29.00 |
+|   1001 | dc01    | double | 30.00 |
+|   1101 | dc01    | family | 35.00 |
+|    701 | fb01    | family | 39.00 |
++--------+---------+--------+-------+
+5 rows in set (0.000 sec)
+
+3)
+
+MariaDB [vacation]> select * from booking where dateto is null;
++---------+---------+------------+--------+--------+
+| hotelno | guestno | datefrom   | dateto | roomno |
++---------+---------+------------+--------+--------+
+| ch01    |   10006 | 2023-04-21 | NULL   |   1101 |
+| dc01    |   10003 | 2023-05-20 | NULL   |   1001 |
+| fb01    |   10001 | 2023-05-01 | NULL   |    701 |
++---------+---------+------------+--------+--------+
+3 rows in set (0.001 sec)
+
+4)
+
+MariaDB [vacation]> select type,round(avg(price),2) from room GROUP BY type;
++--------+---------------------+
+| type   | round(avg(price),2) |
++--------+---------------------+
+| double |               40.00 |
+| family |               44.66 |
+| single |               27.00 |
++--------+---------------------+
+3 rows in set (0.000 sec)
+
+5)
+
+MariaDB [vacation]> select type,sum(price) from room GROUP BY type HAVING type="double";
++--------+------------+
+| type   | sum(price) |
++--------+------------+
+| double |     160.00 |
++--------+------------+
+1 row in set (0.000 sec)
+
+6)
+
+MariaDB [vacation]> SELECT * from booking WHERE dateto>"2023-08-01";
++---------+---------+------------+------------+--------+
+| hotelno | guestno | datefrom   | dateto     | roomno |
++---------+---------+------------+------------+--------+
+| fb02    |   10005 | 2023-05-12 | 2031-05-04 |   1101 |
++---------+---------+------------+------------+--------+
+1 row in set (0.000 sec)
+OR
+MariaDB [vacation]> SELECT count(*) from booking WHERE dateto>"2023-08-01";
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.001 sec)
+
