@@ -1,0 +1,415 @@
+1)
+----------
+soft mask
+----------
+guest@vbox:~/exercises$ curl 'https://rest.ensembl.org/sequence/region/human/13:32889000..32891000:1?mask=soft' -H 'Content-type:text/x-fasta'
+>chromosome:GRCh38:13:32889000:32891000:1
+ttatgcttctgataaatttgggttatagtttgtttaaaatcagctggaagtttttaatta
+ttgtactcaaaggatgacacaccaaaatcttcagcttttgaagtttttgatgaattgtaa
+ttattgagagaaaagcttgcctgggaaggcattagaattcacctctataaaaggcaagag
+aaaaacacaagaaattaaacaatgagaattcaaactatatttaaaatttgattttgagtt
+actataattgcaccttggaatatatcgaattgcaggaagaactttttgatgaagttttta
+ctttaattgtaagtctatattctgtattgaaagaaggtctttgatttgcagtccctacct
+ttggtgaaaccttaaaataatcatagagacaatgtatttaatgagttttatcttgtagaa
+atagttgttgaaaaatagaggcaaataacaagtctttaaaaaatactagggctgaaatat
+ttacgcatttaaaaatGGACAATGTATTCCTCtttttttttttcttttttgagatggagt
+attgctctgttgcccatgctggagtgcagtggtgccatcttggctcagtgcaaccttcag
+ctccctggttcaagcgattctaatgcctcagcctcccaagtagctgggattaccggcata
+tgccTGGCTGACAAAACATTCTTTACATCTAAGAATAGGTGTCGGTGGAAGTGCTGAGGA
+GGGAGGCAAATTCATATTTTTAATGGATCTCTTCATGTGAAGACAAaatgttatcctttc
+cccaaggcactgactgtttttcccaggggatcgtgccatactggggactcagcgttagcc
+tctgagtttggggcgttgggtaccctggagtcgtggtggccagatcagacgtggtgaagg
+aagatcgtgctgttgagcatgcacagcctccatggagcaggccctggagtggctgactga
+caggctttgaatgggctctcttttccacctggctactaggacactcctctgtcaggagtg
+tctttggccgacatatacatgagccataaacatctttgtgttacacgctcattctaaaag
+agccaactatgtgtctctatcctagacttccttgtcactaatttttcaattctttccaag
+tctgtgagcaagcagccaagccattagctgttgcctatgagtcattacagatttgtatct
+caggccacttctccttccgcatgaagtagaagactagatgtaccacttgaagttctgccc
+accaggataatttgccttcatcactgcctttcagggccatctttaaaagtgtagtgctaa
+aggcatccacatctggctcatgcctgcacaccatgaggattcatttgtagacgaggcctg
+tgctttatcttttcctgctaactggacataggggactcgccctgaggtcacaggtatgga
+taagggtgaggtggtggagcagtggctgctggagtcatggcagtgaggggcagctgttgg
+tgcagttcgtgcatgctttctggacctgcttgggcttggtctcctatataccacttccaa
+tttgtaatggaaagttgctgtacatgtctgacttggtggtttggtgaatttaacttatga
+tggacagttgggttgcacagtcaagttggtataccctggtgaagcataaagcctctacca
+gggcccagcagccagacatcagctgcttttatgatggagaatagttgtcagcagaggaga
+gcatttggggcttGCCAGCTACCCCAGTGGAGCTccacagacactttccattgggtctgt
+tggtaataaggtttaagtggcagggcagcttgcaccagagcatcaacctgctgaagaatc
+cttttttgatttctgctaagctctaaactgtcagccttatggttttcctggcaaatgaac
+tgtaattgcatatactcatacttgccatatattgcctccccaaacaaaagagggccacca
+agcatcatgccttctttgtgg
+
+
+-----------
+hard mask
+-----------
+guest@vbox:~/exercises$ curl 'https://rest.ensembl.org/sequence/region/human/13:32889000..32891000:1?mask=hard' -H 'Content-type:text/x-fasta'
+>chromosome:GRCh38:13:32889000:32891000:1
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNGGACAATGTATTCCTCNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNTGGCTGACAAAACATTCTTTACATCTAAGAATAGGTGTCGGTGGAAGTGCTGAGGA
+GGGAGGCAAATTCATATTTTTAATGGATCTCTTCATGTGAAGACAANNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNGCCAGCTACCCCAGTGGAGCTNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNN
+
+answer: 4 repeated regions
+
+
+2)
+guest@vbox:~/exercises$ curl 'https://rest.ensembl.org/xrefs/symbol/homo_sapiens/CCR5?' -H 'Content-type:text/xml'
+<opt>
+  <data id="ENSG00000160791" type="gene" />
+</opt>
+
+
+3)
+~/exercises$ curl 'https://rest.ensembl.org/homology/id/human/ENSG00000160791?format=condensed;type=orthologues' -H 'Content-type:text/xml'
+<opt>
+  <data>
+    <data id="ENSG00000160791">
+      <homologies id="ENSPTRG00000014848" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPTRP00000025599" species="pan_troglodytes" taxonomy_level="Homininae" type="ortholog_one2one" />
+      <homologies id="ENSGGOG00000040927" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGGOP00000051433" species="gorilla_gorilla" taxonomy_level="Homininae" type="ortholog_one2one" />
+      <homologies id="ENSPPAG00000004216" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPPAP00000001023" species="pan_paniscus" taxonomy_level="Homininae" type="ortholog_one2one" />
+      <homologies id="ENSPPYG00000014492" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPPYP00000016199" species="pongo_abelii" taxonomy_level="Hominidae" type="ortholog_one2one" />
+      <homologies id="ENSSHAG00000021136" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSHAP00000036985" species="sarcophilus_harrisii" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSSHAG00000027576" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSHAP00000037055" species="sarcophilus_harrisii" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSOANG00000040545" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOANP00000050701" species="ornithorhynchus_anatinus" taxonomy_level="Mammalia" type="ortholog_many2many" />
+      <homologies id="ENSOANG00000006786" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOANP00000010829" species="ornithorhynchus_anatinus" taxonomy_level="Mammalia" type="ortholog_many2many" />
+      <homologies id="ENSCHOG00000011496" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCHOP00000010157" species="choloepus_hoffmanni" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSDNOG00000024612" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDNOP00000016115" species="dasypus_novemcinctus" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSDNOG00000045226" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDNOP00000027913" species="dasypus_novemcinctus" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSEEUG00000013605" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSEEUP00000012394" species="erinaceus_europaeus" taxonomy_level="Boreoeutheria" type="ortholog_one2many" />
+      <homologies id="ENSEEUG00000014391" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSEEUP00000013111" species="erinaceus_europaeus" taxonomy_level="Boreoeutheria" type="ortholog_one2many" />
+      <homologies id="ENSCJAG00000038668" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCJAP00000053250" species="callithrix_jacchus" taxonomy_level="Simiiformes" type="ortholog_one2one" />
+      <homologies id="ENSCATG00000040951" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCATP00000036258" species="cercocebus_atys" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSMFAG00000002809" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMFAP00000032465" species="macaca_fascicularis" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSMMUG00000055383" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMMUP00000075259" species="macaca_mulatta" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSMNEG00000030563" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMNEP00000012525" species="macaca_nemestrina" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSMLEG00000026575" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMLEP00000006376" species="mandrillus_leucophaeus" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSPANG00000049617" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPANP00000057388" species="papio_anubis" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSVVUG00000005998" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSVVUP00000007940" species="vulpes_vulpes" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSDLEG00000012636" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDLEP00000017302" species="delphinapterus_leucas" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSECAG00000001114" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSECAP00000025535" species="equus_caballus" taxonomy_level="Boreoeutheria" type="ortholog_one2many" />
+      <homologies id="ENSECAG00000045032" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSECAP00000051901" species="equus_caballus" taxonomy_level="Boreoeutheria" type="ortholog_one2many" />
+      <homologies id="ENSECAG00000056436" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSECAP00000067457" species="equus_caballus" taxonomy_level="Boreoeutheria" type="ortholog_one2many" />
+      <homologies id="ENSPCAG00000007437" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPCAP00000006919" species="procavia_capensis" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="MGP_SPRETEiJ_G0034021" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="MGP_SPRETEiJ_P0094514" species="mus_spretus" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSMICG00000049350" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMICP00000051008" species="microcebus_murinus" taxonomy_level="Primates" type="ortholog_one2one" />
+      <homologies id="ENSBTAG00000067584" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSBTAP00000079074" species="bos_taurus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSUAMG00000000829" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSUAMP00000000838" species="ursus_americanus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSVURG00010021881" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSVURP00010028585" species="vombatus_ursinus" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSVURG00010021880" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSVURP00010028582" species="vombatus_ursinus" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSOARG00020025170" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOARP00020058222" species="ovis_aries_rambouillet" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSSSCG00000024344" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSSCP00000072998" species="sus_scrofa" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSMAUG00000000842" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMAUP00000001124" species="mesocricetus_auratus" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSRFEG00010016913" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSRFEP00010025374" species="rhinolophus_ferrumequinum" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSCDRG00005005900" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCDRP00005008343" species="camelus_dromedarius" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSEASG00005034993" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSEASP00005058788" species="equus_asinus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSMPUG00000019652" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMPUP00000019524" species="mustela_putorius_furo" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSMODG00000042135" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMODP00000055589" species="monodelphis_domestica" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSMODG00000050965" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMODP00000043446" species="monodelphis_domestica" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSMODG00000011463" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMODP00000014326" species="monodelphis_domestica" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSMMMG00000007137" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMMMP00000007958" species="marmota_marmota_marmota" taxonomy_level="Euarchontoglires" type="ortholog_one2one" />
+      <homologies id="ENSMMNG00015021408" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMMNP00015029360" species="monodon_monoceros" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSHGLG00000036727" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSHGLP00000046644" species="heterocephalus_glaber_female" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSHGLG00000035713" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSHGLP00000059914" species="heterocephalus_glaber_female" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSPPRG00000015563" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPPRP00000025319" species="panthera_pardus" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSPPRG00000000156" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPPRP00000003842" species="panthera_pardus" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSSVLG00005023362" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSVLP00005029599" species="sciurus_vulgaris" taxonomy_level="Euarchontoglires" type="ortholog_one2one" />
+      <homologies id="ENSCAFG00845012125" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCAFP00845016932" species="canis_lupus_familiaris" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSRROG00000000628" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSRROP00000000252" species="rhinopithecus_roxellana" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSCLAG00000016011" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCLAP00000023345" species="chinchilla_lanigera" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSCLAG00000014465" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCLAP00000021110" species="chinchilla_lanigera" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSBMUG00000002475" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSBMUP00000003118" species="bos_mutus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSDORG00000028609" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDORP00000027048" species="dipodomys_ordii" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSDORG00000024671" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDORP00000024984" species="dipodomys_ordii" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSPCIG00000010664" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPCIP00000013555" species="phascolarctos_cinereus" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSPCIG00000010666" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPCIP00000013558" species="phascolarctos_cinereus" taxonomy_level="Theria" type="ortholog_many2many" />
+      <homologies id="ENSMOCG00000016137" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMOCP00000017578" species="microtus_ochrogaster" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSOGAG00000016287" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOGAP00000014579" species="otolemur_garnettii" taxonomy_level="Primates" type="ortholog_one2one" />
+      <homologies id="ENSSTOG00000001674" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSTOP00000019243" species="ictidomys_tridecemlineatus" taxonomy_level="Euarchontoglires" type="ortholog_one2one" />
+      <homologies id="ENSPSMG00000010756" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPSMP00000015066" species="prolemur_simus" taxonomy_level="Primates" type="ortholog_one2one" />
+      <homologies id="ENSCSAG00000018777" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCSAP00000018297" species="chlorocebus_sabaeus" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSMMSG00000019410" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMMSP00000025738" species="moschus_moschiferus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSNVIG00000021419" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNVIP00000027698" species="neovison_vison" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSOPRG00000011364" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOPRP00000010361" species="ochotona_princeps" taxonomy_level="Boreoeutheria" type="ortholog_one2many" />
+      <homologies id="ENSOPRG00000011340" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOPRP00000010352" species="ochotona_princeps" taxonomy_level="Boreoeutheria" type="ortholog_one2many" />
+      <homologies id="ENSJJAG00000006289" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSJJAP00000003253" species="jaculus_jaculus" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSUMAG00000004638" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSUMAP00000005859" species="ursus_maritimus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSCGRG00001001844" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCGRP00001001882" species="cricetulus_griseus_chok1gshd" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSCWAG00000017962" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCWAP00000023573" species="catagonus_wagneri" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSRNOG00000049115" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSRNOP00000073121" species="rattus_norvegicus" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSBMSG00010019633" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSBMSP00010026974" species="balaenoptera_musculus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSNGAG00000015317" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNGAP00000013856" species="nannospalax_galili" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSMSIG00000021653" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMSIP00000025631" species="mus_spicilegus" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSPVAG00000004380" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPVAP00000004147" species="pteropus_vampyrus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSBGRG00000010403" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSBGRP00000016509" species="bos_grunniens" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSPEMG00000022837" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPEMP00000026864" species="peromyscus_maniculatus_bairdii" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSRBIG00000016621" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSRBIP00000003507" species="rhinopithecus_bieti" taxonomy_level="Catarrhini" type="ortholog_one2one" />
+      <homologies id="ENSLAFG00000025726" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSLAFP00000026622" species="loxodonta_africana" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSBIXG00005022625" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSBIXP00005040085" species="bos_indicus_hybrid" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSCPOG00000011140" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPOP00000010018" species="cavia_porcellus" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSCPOG00000040095" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPOP00000031375" species="cavia_porcellus" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSUPAG00010015918" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSUPAP00010020082" species="urocitellus_parryii" taxonomy_level="Euarchontoglires" type="ortholog_one2one" />
+      <homologies id="ENSMUSG00000079227" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMUSP00000107069" species="mus_musculus" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSBBBG00000003120" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSBBBP00000020424" species="bison_bison_bison" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSPSNG00000012107" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPSNP00000016438" species="phocoena_sinus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSCHYG00000022968" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCHYP00000034289" species="cervus_hanglu_yarkandensis" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSCAFG00020013868" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCAFP00020017315" species="canis_lupus_dingo" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="MGP_PahariEiJ_G0015738" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="MGP_PahariEiJ_P0026440" species="mus_pahari" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="MGP_CAROLIEiJ_G0032872" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="MGP_CAROLIEiJ_P0090766" species="mus_caroli" taxonomy_level="Eutheria" type="ortholog_one2one" />
+      <homologies id="ENSPTIG00000006586" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPTIP00000003954" species="panthera_tigris_altaica" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSPTIG00000014300" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPTIP00000015098" species="panthera_tigris_altaica" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSAMEG00000019507" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSAMEP00000020569" species="ailuropoda_melanoleuca" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSTTRG00000017294" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTTRP00000016391" species="tursiops_truncatus" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSPCTG00005009869" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPCTP00005013748" species="physeter_catodon" taxonomy_level="Boreoeutheria" type="ortholog_one2one" />
+      <homologies id="ENSFCAG00000049013" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSFCAP00000054547" species="felis_catus" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSFCAG00000018682" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSFCAP00000015566" species="felis_catus" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSPLOG00000002409" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPLOP00000003314" species="panthera_leo" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSPLOG00000002398" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPLOP00000003306" species="panthera_leo" taxonomy_level="Eutheria" type="ortholog_one2many" />
+      <homologies id="ENSLOCG00000000929" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSLOCP00000001039" species="lepisosteus_oculatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSLOCG00000018321" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSLOCP00000022422" species="lepisosteus_oculatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCHAG00020015929" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCHAP00020036215" species="clupea_harengus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCHAG00020015943" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCHAP00020036252" species="clupea_harengus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCHAG00020015936" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCHAP00020036231" species="clupea_harengus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSDARG00000105363" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDARP00000142057" species="danio_rerio" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSDARG00000079829" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDARP00000142081" species="danio_rerio" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSDARG00000070755" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDARP00000094951" species="danio_rerio" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCARG00000009002" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCARP00000019643" species="carassius_auratus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCARG00000017804" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCARP00000041170" species="carassius_auratus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCARG00000045863" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCARP00000092371" species="carassius_auratus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCARG00000012750" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCARP00000028686" species="carassius_auratus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCARG00000017808" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCARP00000041178" species="carassius_auratus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSAMXG00000032773" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSAMXP00000042686" species="astyanax_mexicanus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSAMXG00000042438" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSAMXP00000033181" species="astyanax_mexicanus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015018979" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015039130" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015001946" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015003561" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015020367" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015043205" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015001944" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015003557" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015026345" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015059147" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015001948" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015003570" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015020342" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015043125" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015020335" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015043095" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015020338" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015043102" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015026630" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015059703" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015026637" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015059744" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSIPUG00015020364" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSIPUP00015043183" species="ictalurus_punctatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSEEEG00000003413" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSEEEP00000006451" species="electrophorus_electricus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSELUG00000007028" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSELUP00000006089" species="esox_lucius" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSELUG00000037248" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSELUP00000080647" species="esox_lucius" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSELUG00000007016" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSELUP00000006083" species="esox_lucius" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSOMYG00000012147" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOMYP00000025634" species="oncorhynchus_mykiss" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSOMYG00000015285" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOMYP00000032632" species="oncorhynchus_mykiss" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSOKIG00005004531" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOKIP00005010097" species="oncorhynchus_kisutch" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSOKIG00005028603" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOKIP00005066466" species="oncorhynchus_kisutch" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSSSAG00000036208" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSSAP00000028222" species="salmo_salar" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSGMOG00000004653" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGMOP00000004926" species="gadus_morhua" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSFHEG00000004960" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSFHEP00000004053" species="fundulus_heteroclitus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSSTUG00000011872" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSTUP00000027352" species="salmo_trutta" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSSTUG00000038964" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSTUP00000088603" species="salmo_trutta" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPREG00000011591" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPREP00000017142" species="poecilia_reticulata" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSORLG00000005194" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSORLP00000006547" species="oryzias_latipes" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSORLG00000022103" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSORLP00000035998" species="oryzias_latipes" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSXMAG00000020910" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSXMAP00000037019" species="xiphophorus_maculatus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSACLG00000018131" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000026642" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000018031" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000026501" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000018070" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000026580" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000018015" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000026492" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000017989" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000026439" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000018118" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000026632" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000035090" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000077013" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000018038" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000026530" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000033628" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000085131" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACLG00000017980" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACLP00000026424" species="astatotilapia_calliptera" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSHBUG00000017469" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSHBUP00000031668" species="haplochromis_burtoni" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSHBUG00000017452" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSHBUP00000031656" species="haplochromis_burtoni" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSONIG00000027766" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSONIP00000035438" species="oreochromis_niloticus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSONIG00000043017" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSONIP00000065876" species="oreochromis_niloticus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSONIG00000027997" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSONIP00000054726" species="oreochromis_niloticus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSONIG00000040604" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSONIP00000067046" species="oreochromis_niloticus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSONIG00000007156" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSONIP00000050540" species="oreochromis_niloticus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSONIG00000022826" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSONIP00000075850" species="oreochromis_niloticus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSSAUG00010021295" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSAUP00010051236" species="sparus_aurata" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSLCAG00010018112" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSLCAP00010038687" species="lates_calcarifer" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSCPRG00005008066" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPRP00005011306" species="crocodylus_porosus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCPRG00005008063" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPRP00005011297" species="crocodylus_porosus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSSPUG00000015001" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSPUP00000019469" species="sphenodon_punctatus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSSPUG00000015008" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSPUP00000019474" species="sphenodon_punctatus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSSPUG00000015010" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSPUP00000019480" species="sphenodon_punctatus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSSPUG00000014990" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSPUP00000019465" species="sphenodon_punctatus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCPBG00000023108" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPBP00000032975" species="chrysemys_picta_bellii" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCPBG00000023099" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPBP00000032961" species="chrysemys_picta_bellii" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCPBG00000023104" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPBP00000032969" species="chrysemys_picta_bellii" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCPBG00000023100" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPBP00000032963" species="chrysemys_picta_bellii" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCPBG00000023101" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCPBP00000032966" species="chrysemys_picta_bellii" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSLLTG00000014134" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSLLTP00000018721" species="laticauda_laticaudata" taxonomy_level="Amniota" type="ortholog_one2many" />
+      <homologies id="ENSNSUG00000007307" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNSUP00000009557" species="notechis_scutatus" taxonomy_level="Amniota" type="ortholog_one2many" />
+      <homologies id="ENSXETG00000038447" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSXETP00000096036" species="xenopus_tropicalis" taxonomy_level="Tetrapoda" type="ortholog_one2many" />
+      <homologies id="ENSGALG00010017351" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGALP00010024477" species="gallus_gallus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSGALG00010017278" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGALP00010024360" species="gallus_gallus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSPTXG00000012748" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPTXP00000018486" species="pseudonaja_textilis" taxonomy_level="Amniota" type="ortholog_one2many" />
+      <homologies id="ENSMGAG00000021878" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMGAP00000025735" species="meleagris_gallopavo" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSMGAG00000011571" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMGAP00000012109" species="meleagris_gallopavo" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSAPLG00000019717" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSAPLP00000022040" species="anas_platyrhynchos_platyrhynchos" taxonomy_level="Amniota" type="ortholog_one2many" />
+      <homologies id="ENSPMJG00000010187" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPMJP00000013401" species="parus_major" taxonomy_level="Amniota" type="ortholog_one2many" />
+      <homologies id="ENSSCAG00000001878" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSCAP00000002143" species="serinus_canaria" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSSCAG00000001637" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSCAP00000001896" species="serinus_canaria" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSXCOG00000016218" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSXCOP00000021692" species="xiphophorus_couchianus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSCVAG00000022483" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCVAP00000032457" species="cyprinodon_variegatus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSMAMG00000024038" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMAMP00000035781" species="mastacembelus_armatus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSPNAG00000037636" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNAP00000064342" species="pygocentrus_nattereri" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPNAG00000032898" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNAP00000073786" species="pygocentrus_nattereri" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPNAG00000014093" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNAP00000028413" species="pygocentrus_nattereri" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSDLAG00005033027" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDLAP00005075344" species="dicentrarchus_labrax" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSDLAG00005024611" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSDLAP00005058219" species="dicentrarchus_labrax" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSLBEG00000011665" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSLBEP00000014941" species="labrus_bergylta" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSCGOG00000019400" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCGOP00000042940" species="cottoperca_gobio" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSSHBG00005002144" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSHBP00005002282" species="strigops_habroptila" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSSHBG00005002155" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSHBP00005002292" species="strigops_habroptila" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSKMAG00000020309" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSKMAP00000027391" species="kryptolebias_marmoratus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSNFUG00015005522" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNFUP00015011214" species="nothobranchius_furzeri" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSPFOG00000017756" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPFOP00000017835" species="poecilia_formosa" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSOTSG00005003920" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOTSP00005006915" species="oncorhynchus_tshawytscha" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSOTSG00005065800" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOTSP00005157267" species="oncorhynchus_tshawytscha" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSSDUG00000013869" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSDUP00000019000" species="seriola_dumerili" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSSCUG00000014192" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSCUP00000019236" species="struthio_camelus_australis" taxonomy_level="Amniota" type="ortholog_one2many" />
+      <homologies id="ENSTGUG00000026299" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTGUP00000021568" species="taeniopygia_guttata" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSTGUG00000020581" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTGUP00000031646" species="taeniopygia_guttata" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCJPG00005006687" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCJPP00005007255" species="coturnix_japonica" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCJPG00005004321" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCJPP00005004356" species="coturnix_japonica" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCJPG00005004319" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCJPP00005004354" species="coturnix_japonica" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSSLUG00000011437" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSLUP00000025107" species="sander_lucioperca" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSSLUG00000011449" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSLUP00000025182" species="sander_lucioperca" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCSEG00000011206" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCSEP00000017468" species="cynoglossus_semilaevis" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSLLEG00000019693" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSLLEP00000031087" species="leptobrachium_leishanense" taxonomy_level="Tetrapoda" type="ortholog_one2many" />
+      <homologies id="ENSHCOG00000021098" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSHCOP00000000109" species="hippocampus_comes" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSBSLG00000021087" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSBSLP00000044289" species="betta_splendens" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSSFOG00015002604" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSFOP00015003953" species="scleropages_formosus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSPSIG00000008804" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPSIP00000009689" species="pelodiscus_sinensis" taxonomy_level="Amniota" type="ortholog_one2many" />
+      <homologies id="ENSGACG00000037359" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGACP00000037677" species="gasterosteus_aculeatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSGACG00000001335" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGACP00000001737" species="gasterosteus_aculeatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSGACG00000031124" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGACP00000038146" species="gasterosteus_aculeatus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSFALG00000014351" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSFALP00000014966" species="ficedula_albicollis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSFALG00000014349" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSFALP00000014964" species="ficedula_albicollis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSMMDG00005023935" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMMDP00005053234" species="myripristis_murdjan" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSATEG00000028524" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSATEP00000076131" species="anabas_testudineus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSATEG00000024258" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSATEP00000035302" species="anabas_testudineus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSATEG00000024261" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSATEP00000035294" species="anabas_testudineus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSATEG00000031488" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSATEP00000035297" species="anabas_testudineus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSATEG00000032540" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSATEP00000072251" species="anabas_testudineus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSATEG00000031804" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSATEP00000044628" species="anabas_testudineus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPLAG00000017065" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPLAP00000013538" species="poecilia_latipinna" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSNNAG00000016927" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNNAP00000025967" species="naja_naja" taxonomy_level="Amniota" type="ortholog_one2many" />
+      <homologies id="ENSGEVG00005003924" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGEVP00005005526" species="gopherus_evgoodei" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSGEVG00005003949" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGEVP00005005548" species="gopherus_evgoodei" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSGEVG00005003928" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGEVP00005005532" species="gopherus_evgoodei" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCCRG00000026288" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCCRP00000134065" species="cyprinus_carpio_carpio" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCCRG00000020150" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCCRP00000037700" species="cyprinus_carpio_carpio" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCCRG00000028569" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCCRP00000053420" species="cyprinus_carpio_carpio" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCCRG00000055066" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCCRP00000155096" species="cyprinus_carpio_carpio" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCCRG00000011347" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCCRP00000020627" species="cyprinus_carpio_carpio" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSHHUG00000039088" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSHHUP00000066298" species="hucho_hucho" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSHHUG00000032924" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSHHUP00000054934" species="hucho_hucho" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACCG00020003247" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACCP00020004714" species="aquila_chrysaetos_chrysaetos" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSACCG00020003259" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACCP00020004726" species="aquila_chrysaetos_chrysaetos" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSAOCG00000012993" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSAOCP00000008923" species="amphiprion_ocellaris" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSSPAG00000021035" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSPAP00000027906" species="stegastes_partitus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSTRUG00000032932" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTRUP00000063167" species="takifugu_rubripes" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSOJAG00000020758" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOJAP00000042083" species="oryzias_javanicus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSOJAG00000020767" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOJAP00000042101" species="oryzias_javanicus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSTMTG00000020692" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTMTP00000028508" species="terrapene_carolina_triunguis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSTMTG00000017528" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTMTP00000024058" species="terrapene_carolina_triunguis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSTMTG00000017543" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTMTP00000024072" species="terrapene_carolina_triunguis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSTMTG00000020686" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTMTP00000028500" species="terrapene_carolina_triunguis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSTMTG00000020683" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTMTP00000028496" species="terrapene_carolina_triunguis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSECRG00000018885" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSECRP00000027901" species="erpetoichthys_calabaricus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSACAG00000028320" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACAP00000022897" species="anolis_carolinensis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSACAG00000021130" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACAP00000017924" species="anolis_carolinensis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSACAG00000014097" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACAP00000013830" species="anolis_carolinensis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSOSIG00000010298" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOSIP00000019087" species="oryzias_sinensis" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSSMAG00000004713" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSMAP00000007617" species="scophthalmus_maximus" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSSMRG00000010147" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSMRP00000013023" species="salvator_merianae" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSSMRG00000010149" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSMRP00000013025" species="salvator_merianae" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSACIG00000023367" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACIP00000030195" species="amphilophus_citrinellus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSACIG00000002835" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSACIP00000003574" species="amphilophus_citrinellus" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPMRG00000016711" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPMRP00000025826" species="podarcis_muralis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSPMRG00000016709" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPMRP00000025821" species="podarcis_muralis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSTNIG00000001750" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSTNIP00000000441" species="tetraodon_nigroviridis" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSAPEG00000016049" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSAPEP00000022513" species="amphiprion_percula" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSNBRG00000008590" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNBRP00000011031" species="neolamprologus_brichardi" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSNBRG00000008528" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNBRP00000010942" species="neolamprologus_brichardi" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSNBRG00000000169" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNBRP00000000181" species="neolamprologus_brichardi" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSNBRG00000008521" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNBRP00000010925" species="neolamprologus_brichardi" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSNBRG00000008550" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNBRP00000010976" species="neolamprologus_brichardi" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSNBRG00000008507" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSNBRP00000010909" species="neolamprologus_brichardi" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPKIG00000012712" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPKIP00000032744" species="paramormyrops_kingsleyae" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSSLDG00000020532" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSSLDP00000026403" species="seriola_lalandi_dorsalis" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSGFOG00000001542" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGFOP00000002195" species="geospiza_fortis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSGFOG00000001549" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSGFOP00000002206" species="geospiza_fortis" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSABRG00000008819" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSABRP00000009843" species="anser_brachyrhynchus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSABRG00000008824" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSABRP00000009849" species="anser_brachyrhynchus" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSLCRG00005018584" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSLCRP00005049203" species="larimichthys_crocea" taxonomy_level="Euteleostomi" type="ortholog_one2many" />
+      <homologies id="ENSMZEG00005006537" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005008565" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005027869" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005037384" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005028262" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005037878" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005027875" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005037389" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005027874" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005037388" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005028260" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005037877" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005027867" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005037383" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005006550" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005008610" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005006564" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005008628" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005027876" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005037390" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005000703" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005000789" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005006614" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005008741" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSMZEG00005006592" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSMZEP00005008669" species="maylandia_zebra" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPNYG00000010296" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNYP00000013578" species="pundamilia_nyererei" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPNYG00000010179" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNYP00000013461" species="pundamilia_nyererei" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPNYG00000010232" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNYP00000013519" species="pundamilia_nyererei" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPNYG00000010213" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNYP00000013494" species="pundamilia_nyererei" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPNYG00000010284" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNYP00000013572" species="pundamilia_nyererei" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSPNYG00000010255" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSPNYP00000013534" species="pundamilia_nyererei" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSCABG00000000362" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCABP00000000391" species="chelonoidis_abingdonii" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCABG00000000036" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCABP00000000026" species="chelonoidis_abingdonii" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSCABG00000000157" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSCABP00000000331" species="chelonoidis_abingdonii" taxonomy_level="Amniota" type="ortholog_many2many" />
+      <homologies id="ENSOMEG00000014234" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOMEP00000030148" species="oryzias_melastigma" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+      <homologies id="ENSOMEG00000014223" method_link_type="ENSEMBL_ORTHOLOGUES" protein_id="ENSOMEP00000012809" species="oryzias_melastigma" taxonomy_level="Euteleostomi" type="ortholog_many2many" />
+    </data>
+  </data>
+</opt>
+
+
+4)
+
+5)
+guest@vbox:~/exercises$ curl 'https://rest.ensembl.org/sequence/id' -H 'Content-type:application/json' \
+-H 'Accept:application/json' -X POST -d '{ "ids" : ["ENSG00000002587", "ENSG00000003056" ] }'
+
+6)
